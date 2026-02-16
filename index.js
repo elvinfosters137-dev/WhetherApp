@@ -1,9 +1,9 @@
-function WeatherApp(apiKey) {
+function WEATHERAPP(apiKey) {
   this.apiKey = apiKey;
   this.baseUrl = "https://api.openweathermap.org/data/2.5/";
 }
 WeatherApp.prototype.getCurrentWeather = function (city) {
-  return fetch(`${this.baseUrl}weather?q=${city}&appid=${this.apiKey}&units=metric`)
+  return fetch(`${this.baseUrl}Weather?q=${city}&Appid=${this.apiKey}&Units=Metric`)
     .then(res => res.json());
 };
 WeatherApp.prototype.getForecast = function (city) {
